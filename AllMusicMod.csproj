@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    基准 tModLoader：Steam 安装 d:/steam/steamapps/common/tModLoader
+    版本：1.4.4.9 (2026.07 stable)，构建目标 .NET 8.0 / C# 12
+    AllMusicMod：MP3/在线点歌独立工程（无 MIDI 合成依赖）。
+  -->
+  <PropertyGroup>
+    <tMLSteamPath Condition="'$(tMLSteamPath)' == ''">d:/steam/steamapps/common/tModLoader/</tMLSteamPath>
+    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>12</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>AllMusicMod</RootNamespace>
+    <AssemblyName>AllMusicMod</AssemblyName>
+  </PropertyGroup>
+
+  <Import Project="$(tMLSteamPath)/tMLMod.targets" />
+
+</Project>
